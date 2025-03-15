@@ -81,3 +81,41 @@ body{
         transform: translateY(0%);
     }
 }
+
+.image-row{
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: fixed;
+    inset: 0px;
+    width: 12rem;
+    height: 5rem;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.image-row img{
+    width: 100px;
+    height: auto;
+    height:auto;
+    object-fit: cover;
+}
+
+.stackinfo h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    
+}
