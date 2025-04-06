@@ -8,8 +8,14 @@
 }
 
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
 
 .navbar{
     position: fixed;
@@ -25,6 +31,7 @@ body{
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+    background-color: #212121;
 }
 
 @keyframes show-content{
@@ -61,6 +68,8 @@ body{
 
 .bars-animation{
     position: absolute;
+    top: 0%;
+    left: 0%;
     width: 100%;
     height: 100%;
     display: flex; 
@@ -80,4 +89,40 @@ body{
     100% {
         transform: translateY(0%);
     }
+}
+
+.contactinfo{
+    margin-top: 150px;
+    margin-bottom: 30px;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.contactinfo h1{
+    color: white;
+    font-size: 50px;
+}
+
+.contactinfo p{
+    color: white;
+    font-size: 20px;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.img-container img{
+    width: 140px;
+    height: auto;
+    object-fit: cover;
 }

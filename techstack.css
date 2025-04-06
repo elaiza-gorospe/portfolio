@@ -7,8 +7,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
 body{
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
 
 .navbar{
@@ -25,7 +31,7 @@ body{
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
-    background-color: rgba(33, 33, 33);
+    background-color: #212121;
 }
 
 @keyframes show-content{
@@ -91,15 +97,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-
-    position: fixed;
-    inset: 0px;
-    width: 12rem;
-    height: 5rem;
-    max-width: 100vw;
-    max-height: 100dvh;
-    margin: auto;
+    gap: 55px;
+    margin: 20px auto;
 
     visibility: hidden;
     opacity: 0;
@@ -107,16 +106,32 @@ body{
     animation-delay: 1.2s;
 }
 
-.image-row img{
+.img-container{
+    position: relative;
+    display: inline-block;
+}
+
+.img-container img{
     width: 100px;
     height: auto;
-    height:auto;
     object-fit: cover;
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.img-container:hover img{
+   transform: translateY(-10px);
 }
 
 .stackinfo{
     margin-top: 150px;
+    margin-bottom: 35px;
     text-align: center;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
 }
 
 .stackinfo h1{
@@ -125,5 +140,5 @@ body{
     justify-content: center;
     align-content: center;
     position: relative;
-    font-size: 50px;
+    font-size: 65px;
 }
