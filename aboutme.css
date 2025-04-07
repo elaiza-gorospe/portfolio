@@ -94,7 +94,8 @@ a{
 .img-container{
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 140px;
+    margin-bottom: 30px;
 
     visibility: hidden;
     opacity: 0;
@@ -124,9 +125,9 @@ a{
     justify-content: center;
     align-content: center;
     position: relative;
-    font-size: 40px;
+    font-size: 50px;
     margin-top: 13px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .aboutinfo p{

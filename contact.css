@@ -103,7 +103,7 @@ a{
 
 .contactinfo h1{
     color: white;
-    font-size: 50px;
+    font-size: 65px;
 }
 
 .contactinfo p{
@@ -111,14 +111,26 @@ a{
     font-size: 20px;
 }
 
-.img-container{
+.img-row{
+    width: 40%;
+    height: auto;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 20px;
+
 
     visibility: hidden;
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+}
+
+.img-container{
+    position: relative;
+    display:flex;
+    justify-content: center;
+
 }
 
 .img-container img{
