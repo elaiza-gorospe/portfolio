@@ -67,6 +67,49 @@ a{
     color: rgb(19, 198, 91);
 }
 
+.bars-animation{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    z-index: -1;
+}
+
+.bars-animation .bar{
+    width: 100%;
+    height: 100%;
+    background: rgb(33, 33, 33);
+    transform: translateY(-100%);
+    animation: show-bars .5s ease-in-out forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes show-bars {
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    animation-delay: 1.2s;
+}
+
+.img-container img{
+    width: 400px;
+    height: auto;
+    object-fit:cover;
+}
+
+
 .aboutinfo{
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -86,6 +129,7 @@ a{
     align-content: center;
     position: relative;
     font-size: 40px;
+    margin-top: 13px;
     margin-bottom: 15px;
 }
 
