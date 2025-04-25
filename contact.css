@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#make-me-cool {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
 body{
     background-color: #fff;
 }
@@ -15,7 +25,6 @@ a{
     color: #fff;
     text-decoration: none;
 }
-
 
 .navbar{
     position: fixed;
@@ -27,23 +36,15 @@ a{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    visibility: hidden;
-    opacity: 0;
-    animation: show-content 1.5s linear forwards;
-    animation-delay: 1.2s;
-    background-color: #212121;
-}
-
-@keyframes show-content{
-    100% {
-        visibility: visible;
-        opacity: 1;
-    }
+    background: transparent;
+    background-color: rgba(33,33,33,0.5);
+    fill-opacity: 100%;
 }
 
 .navbar .logo{
     font-size: 40px;
     font-weight: 700;
+    color: #fff;
 }
 
 .navbar ul{
@@ -66,63 +67,214 @@ a{
     color: rgb(19, 198, 91);
 }
 
-.bars-animation{
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex; 
-    z-index: -1;
-}
-
-.bars-animation .bar{
-    width: 100%;
-    height: 100%;
-    background: rgb(33, 33, 33);
-    transform: translateY(-100%);
-    animation: show-bars .5s ease-in-out forwards;
-    animation-delay: calc(.1s * var(--i));
-}
-
-@keyframes show-bars {
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-.contactinfo{
-    margin-top: 150px;
-    margin-bottom: 30px;
-    text-align: center;
-    visibility: hidden;
-    opacity: 0;
-    animation: show-content 1.5s linear forwards;
-    animation-delay: 1.2s;
-}
-
-.contactinfo h1{
-    color: white;
-    font-size: 50px;
-}
-
-.contactinfo p{
-    color: white;
-    font-size: 20px;
-}
-
-.img-container{
+.contact-container{
     display: flex;
     justify-content: center;
-
-    visibility: hidden;
-    opacity: 0;
-    animation: show-content 1.5s linear forwards;
-    animation-delay: 1.2s;
+    align-items: center;
+    padding: 100px 20px 40px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: rgba(33,33,33 0.5);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.504);
+    border-radius: 20px;
 }
 
-.img-container img{
-    width: 140px;
-    height: auto;
-    object-fit: cover;
+.contact-form {
+    position: relative;
+    background: rgba(33,33,33, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.504);
+}
+
+
+.contact-form h1{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-form p{
+    text-align: center;
+    color: #ffffff;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button {
+    display: block;
+    margin: 0 auto;
+    background-color: #13c65b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    width: 65%;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0fae4e;
+}
+
+.connect-divider {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.connect-divider hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin-bottom: 15px;
+}
+
+.connect-divider p {
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #ffffff;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #13c65b;
+}
+
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width: 480px){
+    #make-me-cool {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        background-color: rgba(33,33,33,0.5);
+        fill-opacity: 100%;
+    }
+
+    #nav-links {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background: rgb(33, 33, 33, 0.5);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 0 20px;
+        z-index: 50;
+        opacity: 1;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.4s ease,
+            padding 0.3s ease,
+            visibility 0.4s;
+    }
+
+    #nav-links.active {
+        max-height: 500px;
+        padding: 20px;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(33, 33, 33, 0.5);
+        color: white;
+    }
+
+    .navbar .logo{
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: -2%;
+        color: white;
+    }
+
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 20px 40px;
+        margin: 15px auto;
+        max-width: 900px;
+        background-color: rgba(33,33,33 0.5);
+        box-shadow: 0 8px 20px rgba(223, 70, 70, 0.1);
+        border-radius: 20px;
+    }
+    
+
 }
