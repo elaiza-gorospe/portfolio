@@ -103,30 +103,28 @@ a {
 
 .home-img .img-box {
     position: relative;
-    width: 25vw;
-    height: 25vw;
+    width: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #212121;
-    margin-top: 20%;
+    margin: 20% auto 0% auto;
     border-radius: 50%;
 }
 
 .home-img .img-box .img-item {
-    width: 25vw;
-    height: 25vw;
-    background: rgb(71, 76, 83);
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    align-content: center;
     overflow: hidden;
 }
 
 .home-img .img-box .img-item img {
     position: relative;
-    display: block;
+    display:flex;
     width: 100%;
     height: 100%;
     object-fit: cover;
