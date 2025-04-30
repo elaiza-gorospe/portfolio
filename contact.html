@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Elaiza Gorospe</title>
+        <title>Elaiza Gorospe | Contact</title>
 
         <link rel="stylesheet" href="contact.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,8 @@
             <div class="logo">EMG</div>
                 <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="tech-stack.html">Tech Stack</a></li>
                     <li><a href="aboutme.html">About</a></li>
+                    <li><a href="tech-stack.html">Tech Stack</a></li>
                     <li class="active"><a href="contact.html">Contact</a></li>
                 </ul>
             <div class="burger-menu" id="burger-menu">
@@ -31,7 +31,7 @@
         </div>
 
         <div class="contact-container">
-           <form class="contact-form">
+           <form id="contact-form" class="contact-form">
                 <h1>Get in touch!</h1>
                 <p>Got something to discuss? Just send a message.</p>
 
@@ -40,6 +40,9 @@
 
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email" required>
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
@@ -80,6 +83,31 @@
               noise: -73,
             };
             ThpaceGL.create(canvas, settings);
+        </script>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+        <script>
+            (function(){
+                emailjs.init("3MSE_KUO4UrFbew0f"); 
+            })();
+        </script>
+
+        <script>
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+              e.preventDefault();
+          
+              emailjs.sendForm('service_yb7fsfs', 'template_gi7gxlj', this)
+                .then(function(response) {
+                  alert('Message sent successfully!');
+                  document.getElementById('contact-form').reset();
+                }, function(error) {
+                  alert('Failed to send message. Please try again later.');
+                  console.error('EmailJS error:', error);
+                });
+            });
           </script>
+          
+          
     </body>
 </html>
