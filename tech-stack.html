@@ -15,10 +15,12 @@
         <canvas id="make-me-cool"></canvas>
 
         <div class="navbar">
-            <div class="logo">EMG</div>
+            <div class="logo">
+                <a href="index.html">EMG</a>
+            </div>
                 <ul id="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutme.html">About</a></li>
+                    <li><a href="about-me.html">About</a></li>
                     <li class="active"><a href="tech-stack.html">Tech Stack</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -78,28 +80,7 @@
             </div>
         </div>
 
-        <script>
-            const burger = document.getElementById('burger-menu');
-            const navLinks = document.getElementById('nav-links');
-        
-            burger.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                burger.classList.toggle('active');
-            });
-        </script>
-
         <script src="https://unpkg.com/thpace"></script>
-
-        <script>
-            const canvas = document.getElementById('make-me-cool');
-
-            const settings = {
-              colors: ['#111111', '#4a4a4a', '#c3c3c3'],
-              triangleSize: 76,
-              bleed: 170,
-              noise: -76,
-            };
-            ThpaceGL.create(canvas, settings);
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>

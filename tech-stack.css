@@ -38,6 +38,7 @@ a{
     background: transparent;
     background-color: rgba(33,33,33,0.5);
     fill-opacity: 100%;
+    z-index: 100;
 }
 
 .navbar .logo{
@@ -92,12 +93,12 @@ a{
 }
 
 .image-row{
-    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
     height: auto;
-    gap: 40px;
+    gap: 15px;
     margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
 }
 
@@ -107,9 +108,8 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     background-color: rgba(33, 33, 33, 0.186);
     border-radius: 15px;
     transition: transform 0.3s ease;
@@ -120,13 +120,12 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-
-    width: 90px;
+    width: 80px;
     height: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
     z-index: 1;
-    margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .img-container p{
@@ -264,14 +263,12 @@ a{
     }
     
     .image-row{
-        width: 80%;
-        margin: 20px auto;
         display: flex;
         flex-wrap: wrap;
+        width: 80%;
+        gap: 15px;
+        margin: 20px auto;
         justify-content: center;
-        gap: 20px;
-        max-height: calc(120px * 2 + 20px);
-        overflow: hidden;
     }
 
     .img-container{
@@ -288,8 +285,6 @@ a{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 5px;
-        margin-bottom: 2px;
         width: 40px;
         height: auto;
         object-fit: contain;
@@ -302,8 +297,7 @@ a{
         justify-content: center;
         align-items: center;
         color: white;
-        margin-top: 20px;
-        font-size: 1px;
+        font-size: 10px;
     }
 
     .img-container:hover{
