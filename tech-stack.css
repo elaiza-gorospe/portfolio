@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#make-me-cool {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body{
+    background-color: #212121;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    background-color: rgba(33,33,33,0.5);
+    fill-opacity: 100%;
+}
+
+.navbar .logo{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 30px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 400;
+    transition: .5s;
+}
+
+.navbar ul li:hover a,
+.navbar ul li.active a{
+    color: rgb(19, 198, 91);
+}
+
+.stackinfo{
+    margin-top: 130px;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.stackinfo h1{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-bottom: 5px;
+    font-size: 60px;
+}
+
+.stackinfo p{
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.image-row{
+    width: 45%;
+    height: auto;
+    gap: 40px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+}
+
+.img-container{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 200px;
+    height: 200px;
+    background-color: rgba(33, 33, 33, 0.186);
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.img-container img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+.img-container p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.img-container:hover{
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.504);
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 25px;
+    height: 20px;
+    justify-content: space-between;
+}
+
+.burger-menu span {
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+@media screen and (max-width: 480px){
+    #make-me-cool {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+        background-color: rgba(33,33,33,0.5);
+        fill-opacity: 100%;
+        height: 70px;
+    }
+
+    #nav-links {
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        background: rgb(33, 33, 33, 0.5);
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 0 20px;
+        z-index: 50;
+        opacity: 1;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition:
+            max-height 0.4s ease,
+            opacity 0.4s ease,
+            padding 0.3s ease,
+            visibility 0.4s;
+    }
+
+    #nav-links.active {
+        max-height: 500px;
+        padding: 20px;
+        opacity: 1;
+        visibility: visible;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(33, 33, 33, 0.5);
+        color: white;
+    }
+
+    .navbar .logo{
+        font-size: 30px;
+        font-weight: 700;
+        margin-top: -2%;
+        color: white;
+    }
+
+    .stackinfo{
+        margin-top: 100px;
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .stackinfo h1{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        position: relative;
+        font-size: 40px;
+    }
+
+    .stackinfo p{
+        color: white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .image-row{
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        max-height: calc(120px * 2 + 20px);
+        overflow: hidden;
+    }
+
+    .img-container{
+        justify-content: center;
+        align-content: center;
+        width: 100px;
+        height: 100px;
+        background-color: rgba(33,33,33,0.5);
+        border-radius: 15px;
+        fill-opacity: 40%;
+    }
+    
+    .img-container img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 2px;
+        width: 40px;
+        height: auto;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+        z-index: 1;
+    }
+
+    .img-container p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 1px;
+    }
+
+    .img-container:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 8px 20px rgba(255, 255, 255, 0.504);
+     }
+}
