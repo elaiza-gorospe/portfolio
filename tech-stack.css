@@ -68,7 +68,7 @@ a{
 }
 
 .stackinfo{
-    margin-top: 130px;
+    margin-top: 160px;
     margin-bottom: 35px;
     text-align: center;
 }
@@ -79,7 +79,7 @@ a{
     justify-content: center;
     align-content: center;
     position: relative;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-size: 60px;
 }
 
@@ -98,7 +98,7 @@ a{
     width: 70%;
     height: auto;
     gap: 15px;
-    margin: 20px auto;
+    margin: 40px auto;
     justify-content: center;
 }
 

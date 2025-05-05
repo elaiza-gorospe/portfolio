@@ -16,4 +16,3 @@ const settings = {
 };
 
 ThpaceGL.create(canvas, settings);
-           

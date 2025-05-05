@@ -18,7 +18,8 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: #212121;
+
 }
 
 a{
@@ -28,17 +29,16 @@ a{
 
 .navbar{
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     padding: 25px 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
     background: transparent;
-    background-color: rgba(33,33,33,0.5);
-    fill-opacity: 100%;
+    background-color: rgba(33, 33, 33, 0.5);    
+    z-index: 1000;
 }
 
 .navbar .logo{
@@ -88,7 +88,6 @@ a{
     max-width: 600px;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.504);
 }
-
 
 .contact-form h1{
     margin-bottom: 20px;
@@ -168,7 +167,6 @@ a{
 .social-icons a:hover {
     color: #13c65b;
 }
-
 
 .burger-menu {
     display: none;
