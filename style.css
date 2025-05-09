@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-.navbar {
+.navbar{
     position: fixed;
     left: 0;
     top: 0;
@@ -35,35 +35,35 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background:transparent;
-    z-index: 100;
-    background-color: rgba(33, 33, 33, 0.5);
+    background: transparent;
+    background-color: rgba(33,33,33,0.5);
     fill-opacity: 100%;
+    z-index: 100;
 }
 
-.navbar .logo {
+.navbar .logo{
     font-size: 40px;
     font-weight: 700;
-    color: white;
+    color: #fff;
 }
 
-.navbar ul {
+.navbar ul{
     display: flex;
 }
 
-.navbar ul li {
+.navbar ul li{
     list-style: none;
     margin-left: 30px;
 }
 
-.navbar ul li a {
+.navbar ul li a{
     font-size: 20px;
     font-weight: 400;
     transition: .5s;
 }
 
 .navbar ul li:hover a,
-.navbar ul li.active a {
+.navbar ul li.active a{
     color: rgb(19, 198, 91);
 }
 
@@ -77,7 +77,7 @@ a {
     height: 100vh;
     background: transparent;
     min-height: 100vh;
-    padding-top: 200px;
+    padding-top: 175px;
 }
 
 .home-info {
@@ -157,7 +157,7 @@ a {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     #make-me-cool {
         position: fixed;
         top: 0;
@@ -207,11 +207,14 @@ a {
         color: white;
     }
 
+    .home-img{
+        margin-top: -5%;
+    }
+
     .home-img .img-box,
     .home-img .img-box .img-item {
         width: 180px;
         height: 180px;
-
     }
 
     .home-info h1 {
@@ -240,3 +243,5 @@ a {
         display: flex;
     }
 }
+
+

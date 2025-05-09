@@ -49,6 +49,8 @@ a{
 
 .navbar ul{
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li{
@@ -91,6 +93,7 @@ a{
 
 .contact-form h1{
     margin-bottom: 20px;
+    font-weight: bold;
     text-align: center;
     color: #ffffff;
 }
@@ -197,7 +200,7 @@ a{
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
     #make-me-cool {
         position: fixed;
         top: 0;
