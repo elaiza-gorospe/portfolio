@@ -172,7 +172,7 @@ a{
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 768px){
     #make-me-cool {
         position: fixed;
         top: 0;
