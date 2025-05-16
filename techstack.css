@@ -48,6 +48,8 @@ a{
 
 .navbar ul{
     display: flex;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar ul li{
@@ -80,6 +82,7 @@ a{
     position: relative;
     margin-bottom: 5px;
     font-size: 60px;
+    font-weight: bold;
 }
 
 .stackinfo p{
@@ -120,7 +123,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-
     width: 90px;
     height: auto;
     object-fit: contain;
