@@ -26,109 +26,176 @@ a {
     text-decoration: none;
 }
 
-.navbar{
+.navbar {
     position: fixed;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
-    padding: 25px 9%;
+    padding: 25px 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     background: transparent;
-    background-color: rgba(33,33,33,0.5);
-    fill-opacity: 100%;
     z-index: 100;
 }
 
-.navbar .logo{
+/* LOGO - UPPER LEFT */
+.navbar .logo {
     font-size: 40px;
     font-weight: 700;
     color: #fff;
+    flex-shrink: 0;
 }
 
-.navbar ul{
+/* NAVIGATION - UPPER MIDDLE */
+.navbar ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
+    align-items: center;
+    gap: 35px;
     margin: 0;
     padding: 0;
 }
 
-.navbar ul li{
+.navbar ul li {
     list-style: none;
-    margin-left: 30px;
+    margin-left: 0;
 }
 
-.navbar ul li a{
+.navbar ul li a {
+    position: relative;
+    display: inline-block;
     font-size: 20px;
     font-weight: 400;
-    transition: .5s;
+    padding-bottom: 8px;
+    transition: .3s ease;
 }
 
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: rgb(195, 92, 179);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgb(195, 92, 179),
+                0 0 10px rgb(195, 92, 179),
+                0 0 20px rgb(195, 92, 179);
+    transition: width .3s ease;
+}
+
+/* Active and hover indicator */
+.navbar ul li.active a::after,
+.navbar ul li:hover a::after {
+    width: 100%;
+}
+
+/* Active and hover text color */
 .navbar ul li:hover a,
-.navbar ul li.active a{
-    color: rgb(19, 198, 91);
+.navbar ul li.active a {
+    color: rgb(195, 92, 179);
 }
 
+/* HOME SECTION */
 .home {
     position: relative;
     z-index: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    background: transparent;
     min-height: 100vh;
-    padding-top: 175px;
+    padding: 120px 9% 50px;
+    gap: 50px;
 }
 
+/* LEFT SIDE - TEXT */
 .home-info {
-    align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-info .intro {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 10px;
 }
 
 .home-info h1 {
-    font-size: 55px;
+    font-size: clamp(65px, 7vw, 115px);
+    line-height: 1.05;
+    font-weight: 800;
     color: white;
-    margin-top: 8px;
-    font-weight: bold;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
 }
 
 .home-info p {
-    font-size: 20px;
-    margin-top: 5px;
-    align-items: center;
+    font-size: 23px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+/* VIEW PROJECTS BUTTON */
+.home-buttons {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+}
+
+.home-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+    background: transparent;
+    transition: .3s ease;
+}
+
+.home-buttons .btn:hover {
+    background: rgb(195, 92, 179);
+    border-color: rgb(195, 92, 179);
+    box-shadow: 0 0 15px rgba(195, 92, 179, .5);
     color: white;
 }
 
-.home-img .img-box {
-    position: relative;
-    width: 80%;
-    height: auto;
+/* RIGHT SIDE - PROFILE IMAGE */
+.home-img {
+    flex: 1;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #212121;
-    margin: 20% auto 0% auto;
+}
+
+.home-img .img-box {
+    width: min(100%, 540px);
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
 }
 
 .home-img .img-box .img-item {
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     overflow: hidden;
 }
 
 .home-img .img-box .img-item img {
-    position: relative;
-    display:flex;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .burger-menu {
