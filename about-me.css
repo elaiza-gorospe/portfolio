@@ -1,7 +1,4 @@
-
-/* =========================
-   GLOBAL STYLES
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
 
 :root {
     --background: #f8f5f2;
@@ -33,9 +30,6 @@ a {
     text-decoration: none;
 }
 
-button {
-    font: inherit;
-}
 
 /* =========================
    NAVIGATION
@@ -78,7 +72,7 @@ button {
 .nav-links li a {
     position: relative;
     display: inline-block;
-    font-size: clamp(13px, 1.15vw, 16px);
+    font-size: clamp(13px, 1.2vw, 17px);
     font-weight: 500;
     padding: 10px 0;
     transition: 0.3s ease;
@@ -120,9 +114,14 @@ button {
 .theme-toggle {
     border: none;
     background: transparent;
-    color: var(--foreground);
-    font-size: 18px;
+    font-size: 19px;
     cursor: pointer;
+    color: var(--foreground);
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: rotate(-15deg);
 }
 
 .burger-menu {
@@ -161,7 +160,7 @@ button {
     width: 100%;
     max-width: 1600px;
     margin: auto;
-    padding: 130px 4.5% 70px;
+    padding: 90px 4.5% 70px;
 }
 
 /* =========================

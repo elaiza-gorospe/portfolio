@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- About Page CSS -->
+    <!-- About CSS -->
     <link rel="stylesheet" href="about-me.css">
 </head>
 
@@ -35,30 +36,25 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <div class="nav-right">
-            <span class="nav-divider"></span>
-            <button class="theme-toggle" aria-label="Toggle theme">
-                <i class="bi bi-moon-fill"></i>
-            </button>
-        </div>
-
-        <div class="burger-menu" id="burger-menu">
+        <button class="burger-menu" id="burger-menu"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
 
     </header>
 
 
-    <!-- ABOUT PAGE -->
+    <!-- MAIN CONTENT -->
     <main class="about-page">
 
-        <!-- PAGE HEADING -->
+        <!-- HERO SECTION -->
         <section class="about-hero">
 
             <div class="about-heading">
-                <span class="section-label">01 / ABOUT</span>
+                <span class="section-label">GET TO KNOW ME</span>
 
                 <h1>
                     ABOUT<br>
@@ -69,9 +65,12 @@
             <div class="about-divider"></div>
 
             <div class="about-hero-description">
+                <span class="hero-small-label">A LITTLE INTRODUCTION</span>
+
                 <h2>
-                    A frontend developer focused on building clean,
-                    responsive, and user-centered digital experiences.
+                    A frontend developer focused on building
+                    clean, responsive, and user-centered
+                    digital experiences.
                 </h2>
             </div>
 
@@ -87,12 +86,20 @@
                 <div class="about-image-backdrop"></div>
 
                 <div class="about-image">
-                    <img src="photo2.jpeg" alt="Elaiza Gorospe">
+                    <img src="photo1.jpg" alt="Portrait of Elaiza Gorospe">
                 </div>
 
-                <span class="about-image-caption">
-                    A LITTLE INTRODUCTION
-                </span>
+                <div class="about-image-caption">
+                    <span>
+                        DESIGNING IDEAS.<br>
+                        BUILDING EXPERIENCES.<br>
+                        ALWAYS LEARNING.
+                    </span>
+
+                    <i class="bi bi-arrow-up-right"></i>
+                </div>
+
+                <span class="image-index">01 / ABOUT ME</span>
 
             </div>
 
@@ -101,32 +108,45 @@
             <div class="about-details">
 
                 <div class="bio-heading">
-                    <span class="section-label">GET TO KNOW ME</span>
 
-                    <h2>Hi, I'm Elaiza Gorospe.</h2>
+                    <span class="section-label">01 — WHO I AM</span>
+
+                    <h2>
+                        Hi, I'm <span>Elaiza Gorospe.</span>
+                    </h2>
+
+                    <p class="bio-intro">
+                        An aspiring developer with an interest
+                        in technology, creativity, and design.
+                    </p>
+
                 </div>
+
 
                 <div class="bio-text">
 
                     <p>
-                        I'm currently pursuing a Bachelor of Science in
-                        Information Technology at St. Dominic College of Asia.
-                        I'm passionate about technology, particularly
-                        UI/UX design and frontend development.
+                        I'm currently pursuing a Bachelor of Science
+                        in Information Technology at St. Dominic
+                        College of Asia. I'm passionate about
+                        technology, particularly UI/UX design
+                        and frontend development.
                     </p>
 
                     <p>
-                        I enjoy turning ideas into functional and visually
-                        engaging digital experiences. I'm interested in
-                        creating interfaces that are not only aesthetically
-                        pleasing but also intuitive and easy to use.
+                        I enjoy turning ideas into functional and
+                        visually engaging digital experiences.
+                        I'm interested in creating interfaces that
+                        are not only aesthetically pleasing but
+                        also intuitive and easy to use.
                     </p>
 
                     <p>
-                        As an aspiring software developer, my goal is to
-                        continuously develop my technical and creative skills,
-                        explore new technologies, and collaborate with
-                        teams to build meaningful and useful applications.
+                        As an aspiring software developer, my goal
+                        is to continuously develop my technical and
+                        creative skills, explore new technologies,
+                        and collaborate with teams to build
+                        meaningful and useful applications.
                     </p>
 
                 </div>
@@ -142,13 +162,14 @@
 
                         <div>
                             <span>LOCATION</span>
-                            <p>Philippines</p>
+                            <p>Cavite, Philippines</p>
                         </div>
                     </div>
 
+
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="bi bi-laptop"></i>
+                            <i class="bi bi-code-slash"></i>
                         </div>
 
                         <div>
@@ -157,14 +178,15 @@
                         </div>
                     </div>
 
+
                     <div class="info-item">
                         <div class="info-icon">
-                            <i class="bi bi-layers"></i>
+                            <i class="bi bi-palette"></i>
                         </div>
 
                         <div>
                             <span>INTERESTS</span>
-                            <p>Web Design, UI/UX, and Product Development</p>
+                            <p>Web Development & UI/UX Design</p>
                         </div>
                     </div>
 
@@ -179,26 +201,67 @@
         <section class="about-bottom">
 
             <div class="bottom-heading">
-                <span class="section-label">MY APPROACH</span>
-                <h2>Always learning.<br>Always creating.</h2>
+
+                <span class="section-label">02 — MY APPROACH</span>
+
+                <h2>
+                    Always learning.<br>
+                    Always creating.
+                </h2>
+
             </div>
 
+
             <div class="bottom-description">
+
                 <p>
-                    I believe good digital experiences come from a balance
-                    of thoughtful design, functionality, and attention
-                    to detail. Every project is an opportunity to learn,
-                    experiment, and improve.
+                    I believe good digital experiences come from
+                    a balance of thoughtful design, functionality,
+                    and attention to detail. Every project is an
+                    opportunity to learn, experiment, and improve.
                 </p>
+
+                <a href="projects.html" class="about-cta">
+                    EXPLORE MY WORK
+                    <i class="bi bi-arrow-up-right"></i>
+                </a>
+
             </div>
 
         </section>
+
+
+        <!-- FOOTER -->
+        <footer class="about-footer">
+            <span>© 2026 ELAIZA GOROSPE</span>
+            <span>DESIGNED WITH PURPOSE.</span>
+        </footer>
 
     </main>
 
 
     <!-- JAVASCRIPT -->
     <script src="script.js"></script>
+
+    <script>
+        const burger = document.getElementById("burger-menu");
+        const navLinks = document.getElementById("nav-links");
+
+        burger.addEventListener("click", () => {
+            const isOpen = navLinks.classList.toggle("active");
+
+            burger.classList.toggle("active", isOpen);
+            burger.setAttribute("aria-expanded", isOpen);
+        });
+
+        navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+                burger.classList.remove("active");
+                burger.setAttribute("aria-expanded", "false");
+            });
+        });
+    </script>
 
 </body>
 </html>
